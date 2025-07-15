@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -31,18 +30,15 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    // Default constructor
     public User() {
     }
 
-    // Constructor with required fields
     public User(String name, String email) {
         this.name = name;
         this.email = email;
         this.createdAt = LocalDateTime.now();
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -83,7 +79,6 @@ public class User {
         this.updatedAt = updatedAt;
     }
 
-    // JPA Lifecycle callbacks
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();

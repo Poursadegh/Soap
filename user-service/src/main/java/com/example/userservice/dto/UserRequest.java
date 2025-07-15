@@ -14,17 +14,14 @@ public class UserRequest {
     @Email(message = "Email should be valid")
     private String email;
 
-    // Default constructor
     public UserRequest() {
     }
 
-    // Constructor with fields
     public UserRequest(String name, String email) {
         this.name = name;
         this.email = email;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }

@@ -10,11 +10,9 @@ public class UserResponse {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    // Default constructor
     public UserResponse() {
     }
 
-    // Constructor with fields
     public UserResponse(Long id, String name, String email, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
@@ -23,7 +21,6 @@ public class UserResponse {
         this.updatedAt = updatedAt;
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

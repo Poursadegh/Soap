@@ -12,15 +12,12 @@ public class ProfileResponse {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     
-    // User information from User Service
     private String userName;
     private String userEmail;
 
-    // Default constructor
     public ProfileResponse() {
     }
 
-    // Constructor with fields
     public ProfileResponse(Long id, Long userId, String bio, String location, Integer age, 
                          LocalDateTime createdAt, LocalDateTime updatedAt, String userName, String userEmail) {
         this.id = id;
@@ -34,7 +31,6 @@ public class ProfileResponse {
         this.userEmail = userEmail;
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

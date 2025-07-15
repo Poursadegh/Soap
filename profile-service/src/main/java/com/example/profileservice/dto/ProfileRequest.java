@@ -22,11 +22,9 @@ public class ProfileRequest {
     @Min(value = 1, message = "Age must be at least 1")
     private Integer age;
 
-    // Default constructor
     public ProfileRequest() {
     }
 
-    // Constructor with fields
     public ProfileRequest(Long userId, String bio, String location, Integer age) {
         this.userId = userId;
         this.bio = bio;
@@ -34,7 +32,6 @@ public class ProfileRequest {
         this.age = age;
     }
 
-    // Getters and Setters
     public Long getUserId() {
         return userId;
     }

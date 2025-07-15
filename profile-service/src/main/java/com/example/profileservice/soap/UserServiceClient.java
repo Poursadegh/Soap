@@ -14,11 +14,6 @@ public class UserServiceClient {
         this.webServiceTemplate = webServiceTemplate;
     }
 
-    /**
-     * Get user by ID via SOAP
-     * @param userId the user ID
-     * @return the user if found, null otherwise
-     */
     public UserType getUserById(Long userId) {
         try {
             GetUserByIdRequest request = new GetUserByIdRequest();
@@ -27,7 +22,6 @@ public class UserServiceClient {
             GetUserByIdResponse response = (GetUserByIdResponse) webServiceTemplate.marshalSendAndReceive(request);
             return response.getUser();
         } catch (Exception e) {
-            // Log the error and return null if user not found or service unavailable
             System.err.println("Error calling User Service via SOAP: " + e.getMessage());
             return null;
         }

@@ -5,7 +5,6 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -41,11 +40,9 @@ public class Profile {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    // Default constructor
     public Profile() {
     }
 
-    // Constructor with required fields
     public Profile(Long userId, String bio, String location, Integer age) {
         this.userId = userId;
         this.bio = bio;
@@ -54,7 +51,6 @@ public class Profile {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -111,7 +107,6 @@ public class Profile {
         this.updatedAt = updatedAt;
     }
 
-    // JPA Lifecycle callbacks
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();

@@ -1,4 +1,4 @@
-git package com.example.profileservice.soap;
+package com.example.profileservice.soap;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
